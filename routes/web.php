@@ -14,3 +14,35 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('contact', function () {
+    return view('contact');
+});
+Route::get('a-propos', function () {
+    return view('a-propos');
+});
+
+Route::get('welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/salut/{name}', function ($name) {
+    return "Salut $name";
+});
+
+Route::get('/clients', 'ClientsController@index');
+Route::post('clients', 'ClientsController@store');
+
+
+
+
+
+//Route::view('/', 'welcome');
+//Route::view('contact', 'contact');
+//Route::view('a-propos', 'a-propos');
+
+
