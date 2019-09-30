@@ -2,14 +2,8 @@
 @section('content')
 
 <ul>
-    <?php foreach ($clients as $client): ?>
-    <li><?= $client->name ?></li>
-    <?php endforeach; ?>
-</ul>
-
-<ul>
     @foreach ($clients as $client)
-    <li>{{ $client->name }}</li>
+    <li><a href="/clients/{{ $client->id }}"->{{ $client->name }}</a> </li>
     @endforeach
 </ul>
 
