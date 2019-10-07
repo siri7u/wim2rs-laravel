@@ -3,7 +3,7 @@
 
 
 <h2>Modifier client</h2>
-<form action=" /clients/{{ $client->id }}" method='POST'>
+<form action=" {{ url('clients') }}/{{ $client->id }}" method='POST'>
 @method('PATCH')
 @csrf
     <div class="form-group">

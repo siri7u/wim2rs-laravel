@@ -75,6 +75,13 @@ class ClientsController extends Controller
         return redirect('/clients');
     }
 
+    public function create(){
+        $clients = \App\Client::where('status', 1)->get();
+
+        return view('clients.create', ['clients' => $clients]);
+
+    }
+
 
 
 
